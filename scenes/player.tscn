@@ -47,7 +47,7 @@ radius = 5.09902
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_svnrb")
 autoplay = "default"
-frame_progress = 0.656795
+frame_progress = 0.500563
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
