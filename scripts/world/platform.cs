@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class platform : AnimatableBody2D
+public partial class Platform : AnimatableBody2D
 {
 	[Export] public float Speed { get; set; } = 20;
 	[Export] public float LeftLimit { get; set; } = -50f;

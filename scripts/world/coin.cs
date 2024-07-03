@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class coin : Area2D
+public partial class Coin : Area2D
 {
 
 	private AudioStreamPlayer audioPlayer;
