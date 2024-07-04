@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://x4u2pmt86cs"]
+[gd_scene load_steps=14 format=3 uid="uid://x4u2pmt86cs"]
 
 [ext_resource type="PackedScene" uid="uid://dxk4l23g66x6h" path="res://scenes/player.tscn" id="1_qq3fp"]
 [ext_resource type="Texture2D" uid="uid://cismdgq6wtc88" path="res://assets/sprites/world_tileset.png" id="3_lrmtg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c4hhrc1t6mynm" path="res://scenes/coin.tscn" id="5_nnt46"]
 [ext_resource type="PackedScene" uid="uid://b5nnlkotkxtpo" path="res://scenes/audio-manager.tscn" id="5_xk17b"]
 [ext_resource type="PackedScene" uid="uid://cn5ifs5qdoefd" path="res://scenes/kill_zone.tscn" id="6_oga1w"]
+[ext_resource type="PackedScene" uid="uid://f1xciaglb0g8" path="res://scenes/enemy.tscn" id="7_p76g5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05750"]
 texture = ExtResource("3_lrmtg")
@@ -537,3 +538,7 @@ position = Vector2(248, -70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Global/KillZone"]
 shape = SubResource("WorldBoundaryShape2D_hpo2r")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Slime" parent="." instance=ExtResource("7_p76g5")]

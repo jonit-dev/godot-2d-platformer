@@ -41,7 +41,6 @@ public partial class kill_zone : Area2D
 
   private void OnTimerTimeout()
   {
-    GD.Print("Timer timeout");
 
     // reload scene
     GetTree().ReloadCurrentScene();
