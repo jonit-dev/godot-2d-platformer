@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://x4u2pmt86cs"]
+[gd_scene load_steps=12 format=3 uid="uid://x4u2pmt86cs"]
 
 [ext_resource type="PackedScene" uid="uid://dxk4l23g66x6h" path="res://scenes/player.tscn" id="1_qq3fp"]
 [ext_resource type="Texture2D" uid="uid://cismdgq6wtc88" path="res://assets/sprites/world_tileset.png" id="3_lrmtg"]
 [ext_resource type="PackedScene" uid="uid://bnn70m4innky4" path="res://scenes/platform.tscn" id="4_5hnsq"]
 [ext_resource type="PackedScene" uid="uid://c4hhrc1t6mynm" path="res://scenes/coin.tscn" id="5_nnt46"]
+[ext_resource type="PackedScene" uid="uid://b5nnlkotkxtpo" path="res://scenes/audio-manager.tscn" id="5_xk17b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05750"]
 texture = ExtResource("3_lrmtg")
@@ -529,3 +530,5 @@ position = Vector2(0, -3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Global/WorldBondary"]
 shape = SubResource("WorldBoundaryShape2D_x5uwp")
+
+[node name="AudioManager" parent="Global" instance=ExtResource("5_xk17b")]

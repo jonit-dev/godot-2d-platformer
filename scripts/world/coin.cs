@@ -9,9 +9,6 @@ public partial class Coin : Area2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-
-
-
 		// Connect the 'body_entered' signal to the 'OnBodyEntered' method using a Callable
 		Connect("body_entered", new Callable(this, nameof(OnBodyEntered)));
 	}
@@ -24,6 +21,8 @@ public partial class Coin : Area2D
 
 		if (body.Name == "Player")
 		{
+
+			AudioManager.singleton.PlaySound("coin_collect");
 			// destroy itself
 			QueueFree();
 		}
