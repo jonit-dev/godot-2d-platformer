@@ -8,12 +8,15 @@ public partial class Enemy : Node2D
 	RayCast2D rayCastRight;
 	RayCast2D rayCastLeft;
 
+	AnimatedSprite2D animatedSprite2D;
+
 	public override void _Ready()
 	{
 
 		rayCastRight = GetNode<RayCast2D>("RayCastRight");
 		rayCastLeft = GetNode<RayCast2D>("RayCastLeft");
 
+		animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 	}
 
@@ -24,10 +27,13 @@ public partial class Enemy : Node2D
 		if (rayCastRight.IsColliding())
 		{
 			isRightDirection = false;
+			animatedSprite2D.FlipH = true;
+
 		}
 		else if (rayCastLeft.IsColliding())
 		{
 			isRightDirection = true;
+			animatedSprite2D.FlipH = true;
 		}
 
 
