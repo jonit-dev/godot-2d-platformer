@@ -58,4 +58,12 @@ frame_progress = 0.477439
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_hhuqa")
 
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(-8, 0)
+
 [connection signal="area_entered" from="KillZone" to="." method="_on_kill_zone_area_entered"]

@@ -543,4 +543,4 @@ shape = SubResource("WorldBoundaryShape2D_hpo2r")
 
 [node name="Slime" parent="." instance=ExtResource("7_p76g5")]
 position = Vector2(24, 16)
-Speed = 10.0
+Speed = 20.0
