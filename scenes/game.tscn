@@ -484,7 +484,7 @@ distance = -77.0
 
 [node name="Player" parent="." instance=ExtResource("1_qq3fp")]
 z_index = 5
-position = Vector2(-54, 32)
+position = Vector2(6, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -8)
@@ -525,7 +525,7 @@ speed_scale = 0.5
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("5_nnt46")]
-position = Vector2(136, -71)
+position = Vector2(120, -70)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("5_nnt46")]
 position = Vector2(248, -70)
@@ -543,4 +543,3 @@ shape = SubResource("WorldBoundaryShape2D_hpo2r")
 
 [node name="Slime" parent="." instance=ExtResource("7_p76g5")]
 position = Vector2(24, 16)
-Speed = 20.0

@@ -32,6 +32,9 @@ public partial class kill_zone : Area2D
     {
       GD.Print("Game over!");
 
+
+      DeathEffect(body);
+
       timer.Start();
 
 
@@ -39,8 +42,17 @@ public partial class kill_zone : Area2D
 
   }
 
+  private void DeathEffect(Node body)
+  {
+    Engine.TimeScale = 0.5; // slow down the game as a visual effect
+    body.GetNode<CollisionShape2D>("CollisionShape2D").QueueFree(); // remove the collision shape of the player
+
+  }
+
   private void OnTimerTimeout()
   {
+
+    Engine.TimeScale = 1; // reset the time scale
 
     // reload scene
     GetTree().ReloadCurrentScene();
