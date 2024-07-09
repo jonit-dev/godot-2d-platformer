@@ -35,6 +35,21 @@ public partial class Player : CharacterBody2D
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 direction = Input.GetVector("move_left", "move_right", "move_up", "move_down");
 
+
+		HandleSpriteFlip(direction);
+
+
+		HandleAnimations(direction);
+
+
+
+		HandleMovement(direction, ref velocity);
+
+
+	}
+
+	public void HandleSpriteFlip(Vector2 direction)
+	{
 		// Flip sprite based on horizontal movement (X axis)
 		if (direction.X < 0)
 		{
@@ -44,7 +59,32 @@ public partial class Player : CharacterBody2D
 		{
 			animatedSprite.FlipH = false;
 		}
+	}
 
+	public void HandleAnimations(Vector2 direction)
+	{
+
+		// if its jumping...
+		if (!IsOnFloor())
+		{
+			animatedSprite.Play("jump");
+			return;
+		}
+
+
+		// Set the animation based on the direction.
+		if (direction != Vector2.Zero)
+		{
+			animatedSprite.Play("run");
+		}
+		else
+		{
+			animatedSprite.Play("idle");
+		}
+	}
+
+	public void HandleMovement(Vector2 direction, ref Vector2 velocity)
+	{
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
@@ -56,11 +96,9 @@ public partial class Player : CharacterBody2D
 
 		Velocity = velocity;
 		MoveAndSlide();
-
-		// Handle the spinning effect.
-
-
 	}
+
+
 
 
 }
