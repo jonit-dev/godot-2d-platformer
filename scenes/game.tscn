@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://x4u2pmt86cs"]
+[gd_scene load_steps=16 format=3 uid="uid://x4u2pmt86cs"]
 
 [ext_resource type="PackedScene" uid="uid://dxk4l23g66x6h" path="res://scenes/player.tscn" id="1_qq3fp"]
 [ext_resource type="Texture2D" uid="uid://cismdgq6wtc88" path="res://assets/sprites/world_tileset.png" id="3_lrmtg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cn5ifs5qdoefd" path="res://scenes/kill_zone.tscn" id="6_oga1w"]
 [ext_resource type="PackedScene" uid="uid://f1xciaglb0g8" path="res://scenes/enemy.tscn" id="7_p76g5"]
 [ext_resource type="Script" path="res://scripts/ScoreManager.cs" id="8_d1nr8"]
+[ext_resource type="FontFile" uid="uid://d3i43riukb6mc" path="res://assets/fonts/PixelOperator8.ttf" id="9_r8bgq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05750"]
 texture = ExtResource("3_lrmtg")
@@ -546,4 +547,16 @@ shape = SubResource("WorldBoundaryShape2D_hpo2r")
 position = Vector2(24, 16)
 
 [node name="ScoreManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("8_d1nr8")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Score" type="Label" parent="UI"]
+offset_left = -132.0
+offset_top = -83.0
+offset_right = -88.0
+offset_bottom = -60.0
+theme_override_fonts/font = ExtResource("9_r8bgq")
+theme_override_font_sizes/font_size = 8
+text = "Score: "
